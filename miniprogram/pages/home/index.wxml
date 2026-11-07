@@ -1,6 +1,11 @@
+<page-meta root-font-size="{{fontSize}}px" />
 <view class="home">
-  <view class="empty-state">
-    <view class="pin" aria-hidden="true"><view class="pin-center"></view></view>
+  <view class="scene" aria-hidden="true">
+    <image class="illustration" src="/assets/family-walk.jpg" mode="aspectFill" />
+    <view class="fade"></view>
+  </view>
+  <view class="copy">
     <text class="message">尚未绑定老人设备</text>
+    <text class="description">绑定后，可在这里查看最近一次上报的位置。</text>
   </view>
 </view>

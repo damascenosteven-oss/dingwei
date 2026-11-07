@@ -45,3 +45,17 @@ test('首页初始显示未绑定提示', () => {
   const markup = read(miniProgramRoot(), home + '.wxml');
   assert.match(markup.replace(/<!--[\s\S]*?-->/g, ''), /<text\b[^>]*>\s*尚未绑定老人设备\s*<\/text>/);
 });
+
+test('首页引用包内插画', () => {
+  const root = miniProgramRoot();
+  const markup = read(root, home + '.wxml');
+  const image = markup.match(/<image\b[^>]*\bsrc="(\/assets\/[\w./-]+)"/);
+  assert.ok(image, '未引用本地插画');
+  const bytes = readFileSync(new URL(image[1].slice(1), root));
+  assert.ok(bytes.length > 0, '插画文件为空');
+});
+
+test('说明作为原生文字独立显示', () => {
+  const markup = read(miniProgramRoot(), home + '.wxml');
+  assert.match(markup, /<text\b[^>]*>\s*绑定后，可在这里查看最近一次上报的位置。\s*<\/text>/);
+});

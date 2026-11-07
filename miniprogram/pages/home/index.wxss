@@ -1,38 +1,53 @@
-page {
-  background: #f6f8f5;
-  color: #203831;
-}
 .home {
-  padding: 64rpx 32rpx;
+  box-sizing: border-box;
+  min-height: 100vh;
+  background: #fcf5e9;
+  color: #294433;
+  padding-bottom: calc(40px + env(safe-area-inset-bottom));
 }
-.empty-state {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 96rpx 24rpx;
-  background: #ffffff;
-  border: 2rpx solid #dee6df;
-  border-radius: 32rpx;
+
+.scene {
+  position: relative;
+  height: 76vw;
+  max-height: 44vh;
+  overflow: hidden;
 }
-.pin {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 52rpx;
-  height: 52rpx;
-  margin-bottom: 36rpx;
-  background: #377259;
-  border-radius: 50% 50% 50% 12%;
-  transform: rotate(-45deg);
+
+.illustration {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-.pin-center {
-  width: 18rpx;
-  height: 18rpx;
-  background: white;
-  border-radius: 50%;
+
+.fade {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 20%;
+  background: linear-gradient(to bottom, rgba(252, 245, 233, 0), #fcf5e9);
 }
+
+.copy {
+  padding: 54rpx 54rpx 0;
+}
+
+.message, .description {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
 .message {
-  font-size: 40rpx;
-  font-weight: 600;
-  line-height: 1.5;
+  font-size: 1.625rem;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.description {
+  margin-top: 18rpx;
+  max-width: 16em;
+  text-wrap: balance;
+  color: #536354;
+  font-size: 1.0625rem;
+  line-height: 1.75;
 }

@@ -2,8 +2,8 @@
   "pages": ["pages/home/index"],
   "window": {
     "navigationBarTitleText": "家人位置",
-    "navigationBarBackgroundColor": "#f6f8f5",
+    "navigationBarBackgroundColor": "#fcf5e9",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#f6f8f5"
+    "backgroundColor": "#fcf5e9"
   }
 }
