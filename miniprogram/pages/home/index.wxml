@@ -1,0 +1,6 @@
+<view class="home">
+  <view class="empty-state">
+    <view class="pin" aria-hidden="true"><view class="pin-center"></view></view>
+    <text class="message">尚未绑定老人设备</text>
+  </view>
+</view>

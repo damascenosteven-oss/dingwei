@@ -1,0 +1,7 @@
+{
+  "appid": "touristappid",
+  "projectname": "dingwei",
+  "compileType": "miniprogram",
+  "miniprogramRoot": "miniprogram/",
+  "setting": {}
+}

@@ -1,0 +1,38 @@
+page {
+  background: #f6f8f5;
+  color: #203831;
+}
+.home {
+  padding: 64rpx 32rpx;
+}
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 96rpx 24rpx;
+  background: #ffffff;
+  border: 2rpx solid #dee6df;
+  border-radius: 32rpx;
+}
+.pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52rpx;
+  height: 52rpx;
+  margin-bottom: 36rpx;
+  background: #377259;
+  border-radius: 50% 50% 50% 12%;
+  transform: rotate(-45deg);
+}
+.pin-center {
+  width: 18rpx;
+  height: 18rpx;
+  background: white;
+  border-radius: 50%;
+}
+.message {
+  font-size: 40rpx;
+  font-weight: 600;
+  line-height: 1.5;
+}
