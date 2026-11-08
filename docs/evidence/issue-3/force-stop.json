@@ -1,0 +1,12 @@
+{
+  "case": "force-stop",
+  "start": "2026-11-07 13:14:37.797998+00:00",
+  "pidBefore": "8692",
+  "absentAfterStop": true,
+  "serverSharingActive": false,
+  "reopenedAt": "2026-11-07 13:16:16.143986+00:00",
+  "pointWhileStopped": null,
+  "pointWithoutNewConsent": null,
+  "verified": true,
+  "finished": "2026-11-07 13:17:56.962181+00:00"
+}

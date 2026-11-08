@@ -1,16 +1,42 @@
-name: 家人首页检查
-
+name: 家庭定位检查
 on: [push, pull_request]
-
 permissions:
   contents: read
 
 jobs:
-  home:
+  family:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - run: node --test checks/home.test.mjs
+      - run: node --test checks/*.test.mjs
+
+  receiver:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install './backend[dev]'
+      - working-directory: backend
+        run: |
+          python -m ruff check app tests ../checks
+          python -m unittest discover -s ../checks -p test_observer.py
+          python -m alembic upgrade head
+          python -m pytest -q
+
+  sender:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - working-directory: android/elder-app
+        run: bash gradlew --no-daemon lintDebug testDebugUnitTest assembleDebug

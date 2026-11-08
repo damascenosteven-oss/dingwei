@@ -1,0 +1,18 @@
+{
+  "scenario": "moving",
+  "serial": "emulator-5586",
+  "source": "AVD system geo fix",
+  "start": "2026-11-07T12:24:51.883856+00:00",
+  "plannedEnd": "2026-11-07T12:54:51.883856+00:00",
+  "duration": 1800,
+  "received": 60,
+  "uniqueCaptures": 60,
+  "mock": 0,
+  "maxArrivalGapSeconds": 30.358020067214966,
+  "maxCaptureGapSeconds": 30.07200002670288,
+  "maxLatencySeconds": 1.263657,
+  "arrivalWithin60s": 1.0,
+  "captureWithin90s": 1.0,
+  "observedMovement": true,
+  "passed": true
+}

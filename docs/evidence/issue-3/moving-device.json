@@ -1,0 +1,9 @@
+{
+  "observedAt": "2026-11-07T20:43:16.1820634+08:00",
+  "avd": "Dingwei_Issue3",
+  "sdk": "36",
+  "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:16/BE2A.250530.026.F3/13894323:userdebug/dev-keys",
+  "apkSha256": "86c0a2f4b18655c90fc46db292d7dcead8c22972ff62500e4f02ddeb44b1f89e",
+  "source": "本次首次安装的收发实现",
+  "keyguardLocked": true
+}

@@ -1,0 +1,28 @@
+{
+  "scope": "Android API 36 synthetic GPS, PostgreSQL, WeChat DevTools",
+  "latestAtFirstReopen": {
+    "sequence": 78,
+    "capturedAt": "2026-11-07T12:57:05.786Z",
+    "receivedAt": "2026-11-07T12:57:06.612325Z",
+    "accuracyMeters": 5,
+    "coordinateSystem": "GCJ02",
+    "screenshot": "family-latest.png"
+  },
+  "locateNow": {
+    "requestedAt": "2026-11-07T12:58:11.836598Z",
+    "sequence": 81,
+    "capturedAt": "2026-11-07T12:58:15.830Z",
+    "receivedAt": "2026-11-07T12:58:20.084489Z",
+    "state": "completed"
+  },
+  "offlineLocate": {
+    "requestedAt": "2026-11-07T13:19:28.290903Z",
+    "expiresAt": "2026-11-07T13:20:13.290903Z",
+    "state": "expired",
+    "linkedPoint": null,
+    "retainedCaptureLocalTime": "2026-11-07 21:18:13"
+  },
+  "otherAuthenticatedFamilyLatestHTTP": 404,
+  "stoppedScreenshot": "family-stopped.png",
+  "verified": true
+}

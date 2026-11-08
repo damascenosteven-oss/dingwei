@@ -1,0 +1,18 @@
+{
+  "attempt": 1,
+  "completedWindows": [
+    "moving (1800 s)",
+    "stationary (1200 s)",
+    "offline (900 s)"
+  ],
+  "notCounted": "Fourth window; system GPS playback stopped before its planned end",
+  "lastGoodObservation": "2026-11-07T16:18:56.230707Z",
+  "failedOperation": "Host ADB could not connect to daemon on port 5041, Windows 10055, while querying deviceidle",
+  "databaseDuringUnmeasuredInterval": {
+    "from": "2026-11-07T16:19:00Z",
+    "to": "2026-11-07T18:54:00Z",
+    "rows": 310,
+    "largestGapBetweenObservedRowsSeconds": 30.103547
+  },
+  "action": "Kept the partial window and restarted the entire real 24 h run on the same APK. Allow up to two bounded retries only for confirmed host connection failures."
+}

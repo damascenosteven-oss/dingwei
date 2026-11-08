@@ -1,0 +1,48 @@
+{
+  "elapsedSeconds": 86588.21916460991,
+  "measuredSeconds": 86400,
+  "windows": 64,
+  "apkSHA256": "6222fe9ac40dcde9f10f721e2e6ae592a108f7f2786b062d90f38b54c17a9b12",
+  "totalBackfilled": 458,
+  "maxSecondsBetweenWindows": 7.713417,
+  "scenarios": {
+    "stationary": {
+      "receivedDuringWindow": 223,
+      "confirmedBackfill": 0,
+      "maxArrivalGapSeconds": 359.99929690361023,
+      "maxLatencySeconds": -1.0839180946350098,
+      "maxIndependentUpperSeconds": null,
+      "minIndependentWithin60s": null,
+      "rawNegativeDelays": 223,
+      "peakQueue": 1,
+      "maxRecoverySeconds": null,
+      "rejected": 0
+    },
+    "offline": {
+      "receivedDuringWindow": 0,
+      "confirmedBackfill": 458,
+      "maxArrivalGapSeconds": 900.0,
+      "maxLatencySeconds": 898.871067,
+      "maxIndependentUpperSeconds": null,
+      "minIndependentWithin60s": null,
+      "rawNegativeDelays": 0,
+      "peakQueue": 30,
+      "maxRecoverySeconds": 0.9504072666168213,
+      "rejected": 0
+    },
+    "moving": {
+      "receivedDuringWindow": 1447,
+      "confirmedBackfill": 0,
+      "maxArrivalGapSeconds": 33.72542643547058,
+      "maxLatencySeconds": 0.8473339080810547,
+      "maxIndependentUpperSeconds": 35.03100000000268,
+      "minIndependentWithin60s": 1.0,
+      "rawNegativeDelays": 1386,
+      "peakQueue": 1,
+      "maxRecoverySeconds": null,
+      "rejected": 0
+    }
+  },
+  "passed": true,
+  "rawLatencyNote": "receivedAt minus capturedAt crosses clocks; negative values retained. Moving delivery is verified by same-clock conservative source-to-committed-observation bounds."
+}

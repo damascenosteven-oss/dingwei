@@ -1,0 +1,17 @@
+{
+  "started": "2026-11-07 14:15:07.824785+00:00",
+  "queuedBeforeStop": [
+    143
+  ],
+  "requestBeforeStop": "pending",
+  "stoppedLocally": "2026-11-07 14:15:39.572842+00:00",
+  "queuedAfterStop": [],
+  "networkRestored": "2026-11-07 14:15:39.718947+00:00",
+  "serverSharingActive": false,
+  "requestAfterStop": "failed",
+  "requestFailure": "sharing_stopped",
+  "queuedIdsReceived": 0,
+  "anyPointsAfterStop": 0,
+  "finished": "2026-11-07 14:16:09.766797+00:00",
+  "verified": true
+}

@@ -1,11 +1,44 @@
 <page-meta root-font-size="{{fontSize}}px" />
 <view class="home">
-  <view class="scene" aria-hidden="true">
-    <image class="illustration" src="/assets/family-walk.jpg" mode="aspectFill" />
-    <view class="fade"></view>
+  <block wx:if="{{!signedIn || state === 'unbound'}}">
+    <view class="scene" aria-hidden="true">
+      <image class="illustration" src="/assets/family-walk.jpg" mode="aspectFill" />
+      <view class="fade"></view>
+    </view>
+    <view class="copy">
+      <text class="message">尚未绑定老人设备</text>
+      <text class="description">绑定后，可在这里查看最近一次上报的位置。</text>
+    </view>
+  </block>
+  <view wx:elif="{{state === 'loading'}}" class="copy"><text class="message">正在读取家庭设备</text></view>
+  <view wx:else class="copy">
+    <text class="message">{{state === 'stopped' ? '已停止共享' : '家人最近的位置'}}</text>
+    <block wx:if="{{point}}">
+      <text class="description">{{stale ? '位置已过期' : '上次位置'}} · 精度约 {{point.accuracyM}} 米</text>
+      <map wx:if="{{point.coordinateSystem === 'GCJ02'}}" class="map" latitude="{{point.latitude}}" longitude="{{point.longitude}}" markers="{{markers}}" scale="15"/>
+      <text wx:else class="detail">{{point.latitude}}, {{point.longitude}} · {{point.coordinateSystem}}</text>
+      <text class="detail">手机采集于 {{capturedText}}</text>
+      <text class="detail" wx:if="{{receivedText}}">服务端收到于 {{receivedText}}</text>
+    </block>
+    <text wx:elif="{{state !== 'stopped'}}" class="description">等待设备上报可用位置</text>
   </view>
-  <view class="copy">
-    <text class="message">尚未绑定老人设备</text>
-    <text class="description">绑定后，可在这里查看最近一次上报的位置。</text>
+  <view class="actions">
+    <button wx:if="{{!signedIn && !signingIn}}" bindtap="toggleLogin">登录家庭</button>
+    <block wx:if="{{!signedIn && signingIn}}">
+      <input placeholder="家庭账号邮箱" value="{{email}}" bindinput="emailInput"/>
+      <input placeholder="密码" password value="{{password}}" bindinput="passwordInput"/>
+      <button loading="{{working}}" bindtap="login">登录</button>
+    </block>
+    <block wx:if="{{signedIn}}">
+      <block wx:if="{{state === 'unbound' || state === 'stopped'}}">
+        <button bindtap="issueCode" disabled="{{working}}">获取绑定码</button>
+        <text class="detail" wx:if="{{bindingCode}}">在老人手机输入 {{bindingCode}}，10 分钟内有效。</text>
+      </block>
+      <button bindtap="refresh">刷新上次位置</button>
+      <button wx:if="{{state !== 'stopped' && state !== 'unbound' && state !== 'loading'}}" bindtap="locate" disabled="{{working || command === '正在获取'}}">立即定位</button>
+      <text class="detail" wx:if="{{command}}">{{command}}</text>
+      <button class="secondary" bindtap="logout">退出家庭账号</button>
+    </block>
+    <text class="error" wx:if="{{error}}">{{error}}</text>
   </view>
 </view>

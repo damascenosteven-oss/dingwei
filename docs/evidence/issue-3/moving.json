@@ -1,0 +1,22 @@
+{
+  "scenario": "moving",
+  "serial": "emulator-5586",
+  "apkSHA256": "6222fe9ac40dcde9f10f721e2e6ae592a108f7f2786b062d90f38b54c17a9b12",
+  "systemImage": "google/sdk_gphone64_x86_64/emu64xa:16/BE2A.250530.026.F3/13894323:userdebug/dev-keys",
+  "source": "AVD system geo fix",
+  "start": "2026-11-07T14:20:04.813978+00:00",
+  "plannedEnd": "2026-11-07T14:50:04.813978+00:00",
+  "duration": 1800,
+  "rejected": 0,
+  "peakQueue": 0,
+  "received": 60,
+  "uniqueCaptures": 60,
+  "mock": 0,
+  "maxArrivalGapSeconds": 30.04188585281372,
+  "maxCaptureGapSeconds": 30.038000106811523,
+  "maxLatencySeconds": 0.19261407852172852,
+  "arrivalWithin60s": 1.0,
+  "captureWithin90s": 1.0,
+  "observedMovement": true,
+  "passed": true
+}

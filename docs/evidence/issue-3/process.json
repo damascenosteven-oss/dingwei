@@ -1,0 +1,15 @@
+{
+  "case": "process",
+  "start": "2026-11-07 14:10:44.724497+00:00",
+  "pidBefore": "10210",
+  "method": "same-UID SIGKILL after am kill spared the foreground service",
+  "firstNewPoint": [
+    141,
+    "2026-11-07 14:10:53.033000+00:00",
+    "2026-11-07 14:10:53.854303+00:00"
+  ],
+  "pidAfter": "12048",
+  "verified": true,
+  "finished": "2026-11-07 14:10:55.208864+00:00",
+  "secondsToFirstReceipt": 9.129806
+}

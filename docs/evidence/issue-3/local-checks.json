@@ -1,0 +1,96 @@
+{
+  "localChecks": [
+    {
+      "command": "node --test checks/*.test.mjs",
+      "exitCode": 0,
+      "tests": 8
+    },
+    {
+      "command": "python -m ruff check app tests ../checks",
+      "exitCode": 0
+    },
+    {
+      "command": "python -m unittest discover -s ../checks -p test_observer.py",
+      "exitCode": 0,
+      "tests": 3
+    },
+    {
+      "command": "python -m pytest -q",
+      "exitCode": 0,
+      "tests": 16
+    },
+    {
+      "command": "gradlew --offline --max-workers=2 lintDebug testDebugUnitTest assembleDebug",
+      "exitCode": 0,
+      "unitTests": 12,
+      "log": "E:/dingwei-qa-issue3/final-source-shortpath-build.log"
+    }
+  ],
+  "longTestInstalledApkSHA256": "6222fe9ac40dcde9f10f721e2e6ae592a108f7f2786b062d90f38b54c17a9b12",
+  "deliveryRebuildApkSHA256": "4af7f35be5391aabbeabf1d9e3a73964bbf95e43a3e3d794d94c5b97f297a07a",
+  "notes": [
+    "After the measured run, trailing blank lines at EOF were normalized in newly added source files. No executable statements changed. The delivery source was rebuilt and checked.",
+    "This repository has no installed shared governance gate or engineering-guard enrollment. Issue, branch and accepted-document consistency were checked manually."
+  ],
+  "sourceSHA256": {
+    "android/elder-app/app/src/debug/AndroidManifest.xml": "3d0e9026a46b6baf487cb084918d8f2d7b536d3ebe4ddaf6c2e0eecaa5b82b90",
+    "android/elder-app/app/src/main/AndroidManifest.xml": "d6b8e712156a585dde19c2097cea672099078ba18bc43dca314c85db63d5b10a",
+    "android/elder-app/app/src/androidTest/java/com/familywatch/elderlocation/data/AppDatabaseMigrationTest.kt": "729e0f1dc5bccad8661506bc223588fe9590d5f5e9127b61b11c3481a9b29de3",
+    "android/elder-app/app/src/debug/res/xml/network_security_config.xml": "87317fd4fffa4c928a93ede7e9ec136b19d543301de21bd6e93ff9c5f97aa0a6",
+    "android/elder-app/app/src/main/java/com/familywatch/elderlocation/ElderApplication.kt": "cd596a64f358d93b40e62548a9d0e6b15a9b017c46bbadd05ae72aa71da35300",
+    "android/elder-app/app/src/main/java/com/familywatch/elderlocation/MainActivity.kt": "d1a63ec6da6fa63fbe5587cd20c67bf4563f68a8797ac2067ca4774d6acb675d",
+    "android/elder-app/app/src/main/java/com/familywatch/elderlocation/data/ApiClient.kt": "1c95b2da2a973f2ba30e429599bd43f760d55b7f61501dfa2d81e44ef8c5333e",
+    "android/elder-app/app/src/main/java/com/familywatch/elderlocation/data/AppContainer.kt": "87d4b6450a4cae61e22612f0ad3b10afc9ea8649d9a065eeacef45d64d540b7a",
+    "android/elder-app/app/src/main/java/com/familywatch/elderlocation/data/AppDatabase.kt": "d1c36f925321e29edd2de936d7df75ebad3d9ebf79da79308b1e1bea2149c5f6",
+    "android/elder-app/app/src/main/java/com/familywatch/elderlocation/data/ConfigRepository.kt": "ae3093d43dc3656c7ad3a3ed26aecbad4a3bfdff4ca68a1b0563defb4989ec0f",
+    "android/elder-app/app/src/main/java/com/familywatch/elderlocation/data/LocationRepository.kt": "5da0b5495baed278dc4dc907e295f45a469b49aa5a27b5140936b3c1f2886ac6",
+    "android/elder-app/app/src/main/java/com/familywatch/elderlocation/data/NetworkErrors.kt": "fc5ef4817735500ed709ed654dd32f583cf0e1b9a8b14b79d960312ffd0e360a",
+    "android/elder-app/app/src/main/java/com/familywatch/elderlocation/data/SecureTokenStore.kt": "86f96ce20ae515efd5ae8b7dabd769dd9dbac7dd121dab78b6673c1f28f01738",
+    "android/elder-app/app/src/main/java/com/familywatch/elderlocation/location/CommandRetryPolicy.kt": "755c00034636bc02b277ee837ad2348b1f88c8c1fe23e6889ea44128f0d4ee02",
+    "android/elder-app/app/src/main/java/com/familywatch/elderlocation/location/LocationService.kt": "e22f86d232bc9259b7ab0a62cda8613604e1f5447d3374ed13473af3f6fbb896",
+    "android/elder-app/app/src/main/java/com/familywatch/elderlocation/location/SamplingPolicy.kt": "2174279e6cb5738f1db53f1784354d2102c71d5fe2882734b21d972ca2576711",
+    "android/elder-app/app/src/main/java/com/familywatch/elderlocation/recovery/BootReceiver.kt": "a4415a087848d0144c4531f69d88ea5b462c65bde4e2a0f845bef58191b879ee",
+    "android/elder-app/app/src/main/java/com/familywatch/elderlocation/recovery/RecoveryWorker.kt": "b4a45c1b13604be3f310cceb709a755f731d3db976821308b918277a9db51e81",
+    "android/elder-app/app/src/main/res/drawable/ic_launcher_foreground.xml": "e1a7430f1f2c95fa0dce8036023517b262605ff160d186c252f03cc855f8e87d",
+    "android/elder-app/app/src/main/res/drawable/ic_location_notification.xml": "598322b8f1c6f5b6ace69c6cbcb62787aac57de12cd58431696000d82d16ed9f",
+    "android/elder-app/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml": "f81216d284f4d0b23ea93c167689df07c9e3e153d2418e03b9aebd2add22d20e",
+    "android/elder-app/app/src/main/res/values/colors.xml": "34206e23752f34083afa33e2deaec4ecd5b8251f123cd7b183ab08c05c6d2c5e",
+    "android/elder-app/app/src/main/res/values/strings.xml": "09a09b76d613866d37ea7fb0c1f1bf0d35e11867a229e9398e61255850af638b",
+    "android/elder-app/app/src/main/res/values/themes.xml": "c0414077435cb8d9be99a0af2d67a32b75650bb63fec2e7328aaadbe51334605",
+    "android/elder-app/app/src/test/java/com/familywatch/elderlocation/ConsentRestartTest.kt": "f83dcfdca8e7057facf13c407f1079fae1d3e8d1e0a12eda1fc357db8abc4f8f",
+    "android/elder-app/app/src/test/java/com/familywatch/elderlocation/data/BatchResponseTest.kt": "57acba4a23a9ff1ee4ced3db7dcf1fc9d3c3694aebb3509e539ac87d91020058",
+    "android/elder-app/app/src/test/java/com/familywatch/elderlocation/data/DeviceConfigResponseTest.kt": "da57844a833e28d46174db832a7fb972526308dcaa9abff55b3f95b46294b0ff",
+    "android/elder-app/app/src/test/java/com/familywatch/elderlocation/data/LocateCommandTest.kt": "dbd3bf86453ebafca7fdd414468c828573d426cbed154e5a5866baddc4e05272",
+    "android/elder-app/app/src/test/java/com/familywatch/elderlocation/data/NetworkErrorsTest.kt": "d60e400add1d9a8cae4de0715be56fa27b78d55eee5e294910956c6b8fa6b2ea",
+    "android/elder-app/app/src/test/java/com/familywatch/elderlocation/location/CommandRetryPolicyTest.kt": "659556e2f13786b7d3a158b82539e90f79072598fc91fb232cf5d79053dd095f",
+    "android/elder-app/app/src/test/java/com/familywatch/elderlocation/location/SamplingPolicyTest.kt": "d67b59b52d6b130e10a3eedaf818087d48a272c3a10ceab9e16b819235ab1847",
+    "backend/app/config.py": "e581f46fe2f3714ebdda4859d170efbce69c9c50c52ced216ea18e605db656d1",
+    "backend/app/database.py": "4e8c2408677265c2c07f3682b65eebfe0b3659ba2a2fd7ee7270339f4c6e9322",
+    "backend/app/dependencies.py": "2443a2affeaeb09c8f2604f30c05b332548815cfc336377961333a457b27bb12",
+    "backend/app/main.py": "27171303f6b6e63415ca276c1d7f5e567adce93e907d102b85c235a4b7032830",
+    "backend/app/models.py": "fb9d79c7a97514d6dfbd8f4912face06d3004022c68678f7127f5c245ddbde24",
+    "backend/app/rate_limit.py": "5a3e7625c1ce83ba58909afebc9bfd1e664d553c8cfa1820b24dab98c106bca4",
+    "backend/app/schemas.py": "120690fdc81d7e2ff530fd864ab90093bb17482daa5e3d3ad834ef20b77c321e",
+    "backend/app/security.py": "92c92772e283e6856246f1ce9b28918b26c58c50092abd5413f1169bcf869880",
+    "backend/app/tracking.py": "0c16d8954bfb03242204d1707bb0d48d2849728f9cebeb924b361a3c97f656d3",
+    "backend/app/__init__.py": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "backend/app/routers/auth.py": "e22f654bdaf61ea8f10b05260f45ad71b0b2daaa607c54f22e73d5e69fa04120",
+    "backend/app/routers/device.py": "02d59728c98edb301028db08356e2f8abcfbedfd513d239bf6bf882cfaa637ee",
+    "backend/app/routers/families.py": "494725aa1005958c77881237b3c30603de521a4a8804f75f66c12a4f80350adf",
+    "backend/app/routers/__init__.py": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "checks/device_consent.py": "b74e6bf6629c485420c0bac43ce7a32803ddc0c4a49d838a7da51b64642428b8",
+    "checks/emulator_lock.py": "fb1a391e551313f4ea4102cd3cafc1b3ae6ca05e9036ea0fd504155d96a016cb",
+    "checks/locked_route.py": "26e43fe2c0b0a6f04c3ef1d635c8e899c2259f14c8629268273022549706b002",
+    "checks/offline_stop.py": "5037ee943bfbaf2bcf28ba2684749fc8882622d149f09cf8fda54d30387eeeef",
+    "checks/process_recovery.py": "35b332c2ae39f0be1e4e083700a773f97d6469e67c0e015aa05229b176773921",
+    "checks/qa_families.py": "b9de64f9bf65fa6b6b49969d6da0869c40e5bc5ca2e06dbf95b9251b7bfdbd56",
+    "checks/soak.py": "9106446e0f810a83ab8d881d03ef5520dad5b08bc25e2338c0e1a1b5bc7143f1",
+    "checks/test_observer.py": "f8d5a214faad91634d2e7fa708886b62ffc891daa8719fb01bdf8c2d0135fa24",
+    "miniprogram/app.js": "ae4099b3b67d7ab00ec8ed432aa5482495009e1676cda7403c4525a55ec33e41",
+    "miniprogram/app.json": "8ac9446a2c960a8c877ba42dd161d81f9daf397a09e8f2ee04246b4aaa1c3904",
+    "miniprogram/pages/home/index.js": "ad1148986b38acbed79a90a0191ac66469a3c2f6dc76fd18f73b3b8fa6bb5254",
+    "miniprogram/pages/home/index.json": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+    "miniprogram/pages/home/index.wxml": "e274cc47437320b58c98c76b207d5537f8661283c5159b6aa0d0eaf913f70030",
+    "miniprogram/pages/home/index.wxss": "327a263341dc701dd04a902cd05d78b5dcc9e8d874b16d021c43b67462d73f19"
+  }
+}
