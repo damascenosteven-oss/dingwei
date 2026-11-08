@@ -92,5 +92,16 @@
     "miniprogram/pages/home/index.json": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
     "miniprogram/pages/home/index.wxml": "e274cc47437320b58c98c76b207d5537f8661283c5159b6aa0d0eaf913f70030",
     "miniprogram/pages/home/index.wxss": "327a263341dc701dd04a902cd05d78b5dcc9e8d874b16d021c43b67462d73f19"
+  },
+  "skippedChecks": [
+    "Android instrumented AppDatabaseMigrationTest was not executed. The isolated acceptance used a new Room v3 database."
+  ],
+  "remoteFailure": {
+    "run": 42530375097,
+    "job": "sender",
+    "step": "android-actions/setup-android@v3",
+    "reason": "Failed to find package 'tools'",
+    "correction": "Set packages: platform-tools explicitly",
+    "documentation": "https://github.com/android-actions/setup-android"
   }
 }
